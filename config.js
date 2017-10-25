@@ -23,6 +23,7 @@ exports.config = {
        jasmine: 'spec/jasmine/*.js',
        pageObject:'spec/pageObjectTest/*.js',
        dev: "spec/pageObjectTest/flowTest.js",
+       tasks:"spec/pageObjectTest/task1Test.js",
      
    },
    
@@ -34,7 +35,7 @@ exports.config = {
 
     onPrepare:function(){
         global.using=using;
-        //global.ignoreSynchronization = true;
+        browser.ignoreSynchronization = true;
         global.pageObjectDir = __dirname + "/pageObject";
     },
 

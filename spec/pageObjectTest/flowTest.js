@@ -8,7 +8,6 @@ var contactUsPage = new ContactUsPage();
 describe('Protractor Demo App', function () {
 
     it('redirect to Contac Us page', function () {
-        browser.waitForAngularEnabled(false);
         browser.get(homePage.URL);
         homePage.contactUsLink.click();
         expect(contactUsPage.contactUsLabel.getText())
@@ -16,12 +15,10 @@ describe('Protractor Demo App', function () {
 
     });
     it('checking if dropdown list is displayed', function () {
-        browser.waitForAngularEnabled(false);
         browser.get(contactUsPage.URL);
         expect(contactUsPage.subjectHedingDropdownList.isPresent()).toBe(true); 
     });
     it('check visibility of send button', function () {
-        browser.waitForAngularEnabled(false);
         browser.get(contactUsPage.URL);
         expect(contactUsPage.sendButton.isPresent()).toBe(true); 
     }); 
