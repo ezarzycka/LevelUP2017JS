@@ -7,25 +7,22 @@ var contactUsPage = new ContactUsPage();
 
 describe('Protractor Demo App', function () {
 
-    it('should have a title', function () {
-     browser.waitForAngularEnable(false);
+    it('redirect to Contac Us page', function () {
+        browser.waitForAngularEnabled(false);
         browser.get(homePage.URL);
         homePage.contactUsLink.click();
-
-        
-
-        // expect(homePage.cartLabel.getText())
-        //     .toEqual('Cart (empty)');
-
+        expect(contactUsPage.contactUsLabel.getText())
+        .toEqual('CUSTOMER SERVICE - CONTACT US');
 
     });
-    it('should have a title', function () {
-        
-        contactUsPage.contactUsLabel.getText()
-   
-           expect(contactUsPage.contactUsLabel.getText())
-               .toEqual('CUSTOMER SERVICE - CONTACT US');
-   
-   
-       });
+    it('checking if dropdown list is displayed', function () {
+        browser.waitForAngularEnabled(false);
+        browser.get(contactUsPage.URL);
+        expect(contactUsPage.subjectHedingDropdownList.isPresent()).toBe(true); 
+    });
+    it('check visibility of send button', function () {
+        browser.waitForAngularEnabled(false);
+        browser.get(contactUsPage.URL);
+        expect(contactUsPage.sendButton.isPresent()).toBe(true); 
+    }); 
 });
