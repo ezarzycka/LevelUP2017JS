@@ -38,23 +38,25 @@ beforeAll(function () {
 })
 
 beforeEach(function(){  
-    homePage.dressLink.click();
+    
 })
 
 describe('Protractor Demo App', function () {
     it('is Dresses load', function () {
+        homePage.dressLink.click();
         expect(dressesPage.dressesLabel.getText()).toEqual('DRESSES ');
     })
 
     using(data, function (dress) {
         it('check price', function () {
             dressesPage[dress.selectorToClick].click();
-           //console.log(productDressPage.selectorPrice.getText()); //----> console wymaga opakowania w promise
+           //console.log(productDressPage.selectorPrice.getText()); //----> console wymaga  promise
             expect(productDressPage.selectorPrice.getText()).toEqual(dress.price);
+
         });
         it('check label', function () {
-            dressesPage[dress.selectorToClick].click();
             expect(productDressPage.selectorLabel.getText()).toEqual(dress.label);
+            browser.navigate().back();
         });
     });
     
