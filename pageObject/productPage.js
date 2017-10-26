@@ -7,7 +7,10 @@ var ProductPage = function () {
     this.addToCartButton = element(By.css(" #add_to_cart > button > span"));
     this.popUpText= element(By.css("#layer_cart > div.clearfix"));
     this.cartLink = element(By.css("#header > div:nth-child(3) > div > div > div:nth-child(3) > div > a > b"));
+
+
     
+   
 
 
 }

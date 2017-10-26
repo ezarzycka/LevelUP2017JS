@@ -31,15 +31,16 @@ describe('Protractor Demo App', function () {
         expect(productPage.isLabelLongerThan(8).then(console.log)).toBeTruthy;
         expect(productPage.conditionValue.getText()).toEqual("New");
     });
-    it('chose size, add to chart and checking if cart contains the product', function () {
+    it('adding to chart and checking if cart contains the product', function () {
         productPage.sizeM.click();
         productPage.addToCartButton.click();
         productPage.cartLink.click();
         productPage.cartLink.click();
-       expect(shoppingCartPage.productDescription.isDisplayed()).toBeTruthy();    
-       
+        expect(shoppingCartPage.productDescription.isDisplayed()).toBeTruthy();
+        expect(shoppingCartPage.productQty.getAttribute('value')).toEqual('1');
+
     });
 
-    
+
 
 });

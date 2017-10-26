@@ -4,6 +4,8 @@ var HomePage = function(){
     this.cartLabel = element(By.css(".shopping_cart"));
     this.contactUsLink = element(By.css("#contact-link > a"));
     this.womenLink = element(By.css("#block_top_menu > ul > li:nth-child(1) > a"));
+    this.dressLink = element(By.css(".sf-menu > li:nth-child(2) > a:nth-child(1)"));
+    
 
 
 

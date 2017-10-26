@@ -17,7 +17,7 @@ var data= {
 using(data, function(element){
     describe('Protractor Demo App element', function () {
         it('should have a title', function () {
-            browser.waitForAngularEnabled(false);
+           
             browser.get('http://automationpractice.com/index.php');
             // element(By.css('.logo > a:nth-child(1)')).getText
     
