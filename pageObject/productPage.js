@@ -9,7 +9,7 @@ var ProductPage = function () {
     this.cartLink = element(By.css("#header > div:nth-child(3) > div > div > div:nth-child(3) > div > a > b"));
 
 
-    
+
    
 
 
@@ -18,7 +18,8 @@ ProductPage.prototype.isLabelLongerThan = function (isLongerThan) {
     var that=this;
     return new Promise(function (resolve) {
         that.productDescription.getText().then(function (text) {
-            resolve(text.length > isLongerThan);
+            var isLonger = text.length > isLongerThan;
+            resolve(isLonger);
             //resolve(isLongerThan);
         })
     });

@@ -23,7 +23,7 @@ exports.config = {
        jasmine: 'spec/jasmine/*.js',
        pageObject:'spec/pageObjectTest/*.js',
        dev: "spec/pageObjectTest/flowTest.js",
-       tasks:"spec/pageObjectTest/task1Test.js",
+       task1:"spec/pageObjectTest/task1Test.js",
        js:"spec/javascript/zad1.js",
        task2:"spec/pageObjectTest/task2Test.js",
 

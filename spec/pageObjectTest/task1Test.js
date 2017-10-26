@@ -28,7 +28,7 @@ describe('Protractor Demo App', function () {
     });
     it('redirect to Product page', function () {
         topsPage.productLink.click();
-        expect(productPage.isLabelLongerThan(8).then(console.log)).toBeTruthy;
+        expect(productPage.isLabelLongerThan(8)).toBeTruthy();
         expect(productPage.conditionValue.getText()).toEqual("New");
     });
     it('adding to chart and checking if cart contains the product', function () {
