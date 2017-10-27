@@ -7,7 +7,10 @@ var HomePage = function(){
     this.dressLink = element(By.css(".sf-menu > li:nth-child(2) > a:nth-child(1)"));
     
 
-
+    HomePage.prototype.goToWomenPage= function (){
+        var that = this;
+        this.womenLink.click();
+    } 
 
 
 }

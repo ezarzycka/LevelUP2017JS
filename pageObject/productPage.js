@@ -8,12 +8,29 @@ var ProductPage = function () {
     this.popUpText= element(By.css("#layer_cart > div.clearfix"));
     this.cartLink = element(By.css("#header > div:nth-child(3) > div > div > div:nth-child(3) > div > a > b"));
 
-
-
-   
-
-
 }
+
+
+
+ProductPage.prototype.selectSizeM= function (){
+    var that = this;
+    this.sizeM.click();
+} 
+
+ProductPage.prototype.addToShoppingCart= function (){
+    var that = this;
+    this.addToCartButton.click();
+}
+
+
+ProductPage.prototype.goToShoppingCart= function (){
+    var that = this;
+    this.cartLink.click();
+    this.cartLink.click();
+}
+
+
+
 ProductPage.prototype.isLabelLongerThan = function (isLongerThan) {
     var that=this;
     return new Promise(function (resolve) {

@@ -41,6 +41,9 @@ exports.config = {
         global.using=using;
         browser.ignoreSynchronization = true;
         global.pageObjectDir = __dirname + "/pageObject";
+        global.testDataDir=__dirname+"/testData";
+        
+        
     },
 
    

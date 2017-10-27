@@ -5,9 +5,18 @@ var TopsPage = function(){
         this.topsLabel= element(By.css("#center_column > h1 > span.cat-name"));
         this.productLink= element(By.css("li.ajax_block_product:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > a:nth-child(1) > img:nth-child(1)"));
     
-    
-     
-    
     }
     
+
+
+    TopsPage.prototype.goToProductPage= function (){
+        var that = this;
+        this.productLink.click();
+
+
+    } 
+
+
+
+
     module.exports = TopsPage;

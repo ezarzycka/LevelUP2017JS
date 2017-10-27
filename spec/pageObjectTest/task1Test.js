@@ -16,28 +16,31 @@ describe('Protractor Demo App', function () {
 
     it('redirect to Women page', function () {
         browser.get(homePage.URL);
-        homePage.womenLink.click();
+        homePage.goToWomenPage();
         expect(womenPage.womenLabel.getText())
             .toEqual('WOMEN ');
     });
     it('redirect to Tops page', function () {
         expect(womenPage.topMenuTops2.isDisplayed()).toBeTruthy();
-        womenPage.topMenuTops2.click();
+        womenPage.goToTopsPage();
         expect(topsPage.topsLabel.getText())
             .toEqual('TOPS ');
     });
     it('redirect to Product page', function () {
-        topsPage.productLink.click();
-        expect(productPage.isLabelLongerThan(8)).toBeTruthy();
-        expect(productPage.conditionValue.getText()).toEqual("New");
+        topsPage.goToProductPage();
+        expect(productPage.isLabelLongerThan(8))
+            .toBeTruthy();
+        expect(productPage.conditionValue.getText())
+            .toEqual("New");
     });
     it('adding to chart and checking if cart contains the product', function () {
-        productPage.sizeM.click();
-        productPage.addToCartButton.click();
-        productPage.cartLink.click();
-        productPage.cartLink.click();
-        expect(shoppingCartPage.productDescription.isDisplayed()).toBeTruthy();
-        expect(shoppingCartPage.productQty.getAttribute('value')).toEqual('1');
+        productPage.selectSizeM();
+        productPage.addToShoppingCart();
+        productPage.goToShoppingCart();
+        expect(shoppingCartPage.productDescription.isDisplayed())
+            .toBeTruthy();
+        expect(shoppingCartPage.productQty.getAttribute('value'))
+            .toEqual('1');
 
     });
 

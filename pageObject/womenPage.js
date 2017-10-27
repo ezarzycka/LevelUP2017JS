@@ -7,5 +7,14 @@ var WomenPage = function(){
         this.topMenuTops2= element(By.css('div.block_content>ul.tree.dynamized>li:nth-child(1)>a:first-of-type'));
         //
     }
-    
+
+
+    WomenPage.prototype.goToTopsPage= function (){
+        var that = this;
+        this.topMenuTops2.click();
+
+
+    } 
+
+
     module.exports = WomenPage;
